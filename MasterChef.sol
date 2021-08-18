@@ -310,7 +310,7 @@ contract BEP20 is Context, IBEP20, Ownable {
     }
 }
 
-contract BEXToken is BEP20('Xventure', 'XVT') {
+contract BEXToken is BEP20('BEP20 Token', 'Token') {
     function mint(address _to, uint256 _amount) public onlyOwner {
         _mint(_to, _amount);
         _moveDelegates(address(0), _delegates[_to], _amount);
